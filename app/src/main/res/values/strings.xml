@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">K22411CSampleProject</string>
+    <string name="title_login_user_name">User name</string>
+    <string name="title_login_user_name_hint">Enter your username</string>
+    <string name="title_login_password">Password</string>
+    <string name="title_save_login_infor">Save Login Info</string>
+    <string name="title_login_button_login">Login</string>
+    <string name="confirm_exit_title">Exit confirmation</string>
+    <string name="confirm_exit_message">Are you sure to want to exit?</string>
+    <string name="confirm_exit_Yes">Yes</string>
+    <string name="confirm_exit_No">No</string>
+    <string name="title_employee">Employee</string>
+    <string name="title_customer">Customer</string>
+    <string name="title_employee_management">Quản lý nhân sự</string>
+    <string name="title_employee_1">Nhân viên 1: Nguyễn Văn A</string>
+    <string name="title_employee_2">Nhân viên 2: Nguyễn Văn B</string>
+    <string name="title_employee_3">Nhân viên 3: Nguyễn Văn C</string>
+    <string name="title_employee_4">Nhân viên 4: Nguyễn Văn D</string>
+    <string name="title_employee_5">Nhân viên 5: Nguyễn Văn E</string>
+    <string name="title_employee_6">Nhân viên 6: Nguyễn Văn F</string>
+    <string name="title_employee_7">Nhân viên 7: Nguyễn Văn G</string>
+    <string name="title_employee_8">Nhân viên 8: Nguyễn Văn H</string>
+    <string name="title_employee_9">Nhân viên 9: Nguyễn Văn I</string>
+    <string name="title_employee_10">Nhân viên 10: Nguyễn Văn K</string>
+    <string name="title_employee_11">Nhân viên 10: Nguyễn Văn L</string>
+    <string name="title_employee_12">Nhân viên 10: Nguyễn Văn M</string>
+    <string name="title_employee_13">Nhân viên 10: Nguyễn Văn N</string>
+
+</resources>
