@@ -15,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     ImageView imgEmployee;
     TextView txtEmployee;
+    ImageView imgCustomer;
+    TextView txtCustomer;
+    ImageView imgCategory;
+    TextView txtCategory;
 
 
     @Override
@@ -34,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private void addView() {
         imgEmployee=findViewById(R.id.imgEmployee);
         txtEmployee=findViewById(R.id.txtEmployee);
+        imgCustomer=findViewById(R.id.imgCustomer);
+        txtCustomer=findViewById(R.id.txtCustomer);
+        imgCategory=findViewById(R.id.imgCategory);
+        txtCategory=findViewById(R.id.txtCategory);
     }
 
     private void addEvent() {
@@ -51,9 +59,43 @@ public class MainActivity extends AppCompatActivity {
                 //Gọi code mở màn hình quản trị nhân sự
             }
         });
+        imgCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCustomerManagementActivity();
+            }
+        });
+        txtCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCustomerManagementActivity();
+
+            }
+        });
+        txtCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCategoryManagementActivity();
+            }
+        });
+        imgCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCategoryManagementActivity();
+            }
+        });
+
     }
     void openEmployeeManagementActivity(){
         Intent intent= new Intent(MainActivity.this, EmployeeManagementActivity.class);
+        startActivity(intent);
+    }
+    void openCustomerManagementActivity(){
+        Intent intent= new Intent(MainActivity.this, CustomerManagementActivity.class);
+        startActivity(intent);
+    }
+    void openCategoryManagementActivity(){
+        Intent intent= new Intent(MainActivity.this, CategoryManagementActivity.class);
         startActivity(intent);
     }
 }

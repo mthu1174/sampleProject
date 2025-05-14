@@ -1,364 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
+    android:orientation="vertical"
     tools:context=".EmployeeManagementActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayoutContainer"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
 
-        <!-- Tiêu đề -->
-        <TextView
-            android:id="@+id/title"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:text="@string/title_employee_management"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent" >
 
-        <!-- Mỗi dòng nhân viên -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <LinearLayout
+                <ImageView
+                    android:onClick="open_emp_healthcare_activity"
+                    android:id="@+id/imageHealthcare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_employee_healthcare" />
+
+                <TextView
+                    android:onClick="open_emp_healthcare_activity"
+                    android:id="@+id/textHealthcare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C6D4FF"
+                    android:text="@string/title_healthcare"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageEmployeeSalary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_employee_salary" />
+
+                <TextView
+                    android:id="@+id/textEmployeeSalary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#C6D4FF"
+                    android:text="@string/title_employee_salary"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:id="@+id/nameEmployee"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="@string/title_employee_1"
-                android:textColor="#333333"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:id="@+id/imgemployee"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_2"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
+            android:layout_height="match_parent" />
+    </TableLayout>
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_3"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_4"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_5"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_6"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_7"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_8"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_9"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_10"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_11"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_12"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="#F5F5F5"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@mipmap/ic_employee" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="@string/title_employee_13"
-                android:textSize="16sp"
-                android:textColor="#333333" />
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
