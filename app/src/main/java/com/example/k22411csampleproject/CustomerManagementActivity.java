@@ -47,8 +47,10 @@ public class CustomerManagementActivity extends AppCompatActivity {
     }
 
     private void addViews() {
-        lvCustomer.findViewById(R.id.lvCustomer);
+        lvCustomer=findViewById(R.id.lvCustomer);
         adapter=new ArrayAdapter<> (CustomerManagementActivity.this, android.R.layout.simple_list_item_1);
+        connector=new CustomerConnector();
+        adapter.addAll(connector.get_all_customer());
         lvCustomer.setAdapter(adapter);
     }
 }

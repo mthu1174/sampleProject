@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView txtCustomer;
     ImageView imgCategory;
     TextView txtCategory;
+    ImageView imgProduct;
+    TextView txtProduct;
 
 
     @Override
@@ -40,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         txtEmployee=findViewById(R.id.txtEmployee);
         imgCustomer=findViewById(R.id.imgCustomer);
         txtCustomer=findViewById(R.id.txtCustomer);
-        imgCategory=findViewById(R.id.imgCategory);
-        txtCategory=findViewById(R.id.txtCategory);
+        imgProduct=findViewById(R.id.imgProduct);
+        txtProduct=findViewById(R.id.txtProduct);
     }
 
     private void addEvent() {
@@ -72,20 +74,27 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        txtCategory.setOnClickListener(new View.OnClickListener() {
+        txtProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openCategoryManagementActivity();
+                openProductManagementActivity();
             }
         });
-        imgCategory.setOnClickListener(new View.OnClickListener() {
+        imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openCategoryManagementActivity();
+                openProductManagementActivity();
             }
         });
 
     }
+
+    private void openProductManagementActivity() {
+        Intent intent = new Intent(MainActivity.this,ProductManagementActivity.class);
+        startActivity(intent);
+    }
+
+
     void openEmployeeManagementActivity(){
         Intent intent= new Intent(MainActivity.this, EmployeeManagementActivity.class);
         startActivity(intent);
@@ -94,8 +103,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, CustomerManagementActivity.class);
         startActivity(intent);
     }
-    void openCategoryManagementActivity(){
-        Intent intent= new Intent(MainActivity.this, CategoryManagementActivity.class);
-        startActivity(intent);
-    }
+
 }

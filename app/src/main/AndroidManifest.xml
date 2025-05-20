@@ -16,16 +16,10 @@
             android:name=".ProductManagementActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoryManagementActivity"
-            android:exported="false" />
-        <activity
             android:name=".CustomerManagementActivity"
             android:exported="false" />
         <activity
             android:name=".EmployeeHealthcareActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity_employee_management"
             android:exported="false" />
         <activity
             android:name=".EmployeeManagementActivity"
