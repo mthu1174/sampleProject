@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
     TextView txtCategory;
     ImageView imgProduct;
     TextView txtProduct;
+    ImageView imgAdvancedProduct;
+    TextView txtAdvancedProduct;
+    ImageView imgPayment;
+    TextView txtPayment;
+    ImageView imgOrder;
+    TextView txtOrder;
 
 
     @Override
@@ -44,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         txtCustomer=findViewById(R.id.txtCustomer);
         imgProduct=findViewById(R.id.imgProduct);
         txtProduct=findViewById(R.id.txtProduct);
+        imgAdvancedProduct=findViewById(R.id.imgAdvanceProduct);
+        txtAdvancedProduct=findViewById(R.id.txtAdvanceProduct);
+        imgPayment=findViewById(R.id.imgPayment);
+        txtPayment=findViewById(R.id.txtPayment);
     }
 
     private void addEvent() {
@@ -87,6 +97,41 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        imgAdvancedProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdvancedProductManagementActivity();
+            }
+        });
+        txtAdvancedProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAdvancedProductManagementActivity();
+            }
+        });
+        imgPayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPaymentManagementActivity();
+            }
+        });
+        txtPayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPaymentManagementActivity();
+            }
+        });
+
+    }
+
+    private void openPaymentManagementActivity() {
+        Intent intent = new Intent(MainActivity.this,PaymentManagementActivity.class);
+        startActivity(intent);
+    }
+
+    private void openAdvancedProductManagementActivity() {
+        Intent intent = new Intent(MainActivity.this,AdvancedProductManagementActivity.class);
+        startActivity(intent);
     }
 
     private void openProductManagementActivity() {

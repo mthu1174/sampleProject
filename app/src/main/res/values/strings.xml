@@ -26,6 +26,8 @@
     <string name="title_normal">Normal</string>
     <string name="title_fat">Fat</string>
     <string name="title_product">Product</string>
+    <string name="title_payment">Payment Method</string>
+    <string name="title_order">Order</string>
     <string name="title_advanceproduct">AdvanceProduct</string>
     <string name="title_new_customer">New Customer</string>
     <string name="title_broadcast_advertising">Broadcast Advertising</string>
@@ -38,7 +40,6 @@
     <string name="title_new">New</string>
     <string name="title_save">Save</string>
     <string name="title_remove">Remove</string>
-
 
 
 </resources>
